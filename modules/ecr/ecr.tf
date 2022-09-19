@@ -73,4 +73,18 @@ resource "aws_ecr_repository_policy" "samrdaymond_wa_ecrrepopolicy" {
   }
 }
 
+resource "aws_ssm_parameter" "ecr_repo_url" {
+  name = "samrdaymond/wa/ecr/ecr_repo_url"
+  type = "string"
+  overwrite = true
+  value = aws_ecr_repository.samrdaymond_wa_repo.repository_url
+}
+
+resource "aws_ssm_parameter" "samrdaymond_ecs_execution_role_arn" {
+  name = "samrdaymond/wa/ecr/execution_role_arn"
+  type = "string"
+  overwrite = true
+  value = aws_iam_role.samrdaymondecsexecutionrole.arn
+}
+
 

@@ -42,11 +42,6 @@ variable "public_subnet_cidr" {
   
 }
 
-#variable for cidr block for ssh into public sg 
-
-variable "ingress_CIDR_block_pub" {
-  default = "159.196.65.9"
-}
 
 #variable for internet gateway name
 variable "igw_name" {
