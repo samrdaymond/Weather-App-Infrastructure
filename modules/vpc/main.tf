@@ -145,6 +145,7 @@ resource "aws_subnet" "samrdaymond_wa_public_sub_a" {
   vpc_id = aws_vpc.samrdaymond_wa_vpc.id
   cidr_block = var.public_subnet_cidr.sub_a
   availability_zone = "ap-southeast-2a"
+  map_public_ip_on_launch = true
   tags = {
     "name" = "public_sub_a"
     "zone" = "public"
@@ -154,6 +155,7 @@ resource "aws_subnet" "samrdaymond_wa_public_sub_b" {
   vpc_id = aws_vpc.samrdaymond_wa_vpc.id
   cidr_block = var.public_subnet_cidr.sub_b
   availability_zone = "ap-southeast-2b"
+  map_public_ip_on_launch = true
   tags = {
     "name" = "public_sub_b"
     "zone" = "public"
@@ -163,6 +165,7 @@ resource "aws_subnet" "samrdaymond_wa_public_sub_c" {
   vpc_id = aws_vpc.samrdaymond_wa_vpc.id
   cidr_block = var.public_subnet_cidr.sub_c
   availability_zone = "ap-southeast-2c"
+  map_public_ip_on_launch = true
   tags = {
     "name" = "public_sub_c"
     "zone" = "public"

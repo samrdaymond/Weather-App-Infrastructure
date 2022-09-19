@@ -6,3 +6,7 @@ output "ecr_repo_url" {
 output "ecr_name" {
   value = aws_ecr_repository.samrdaymond_wa_repo.name
 }
+
+output "samrdaymond_wa_ecs_task_execution_role_arn" {
+  value = aws_iam_role.samrdaymondEcsExecutionRole.arn
+}
